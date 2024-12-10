@@ -1,0 +1,62 @@
+.title-bar {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items across the bar */
+  padding: 10px; /* Add some padding */
+  background-color: #402e7a; /* Optional: Add a background color */
+}
+
+.logo {
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.app-title {
+  flex-grow: 1; /* Allow title to take up remaining space */
+  text-align: center; /* Center align the title */
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make title bold */
+  color: white;
+}
+
+.sign-in-button {
+  padding: 5px 15px; /* Adjust button padding */
+  font-size: 1rem; /* Adjust font size */
+  background-color: #4b70f5; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.sign-in-button:hover {
+  background-color: #3dc2ec; /* Darken button on hover */
+}
+
+.navbar {
+  background-color: #4c3bcf;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  color: #3dc2ec;
+}
