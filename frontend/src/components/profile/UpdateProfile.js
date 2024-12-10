@@ -24,7 +24,7 @@ export default function UpdateProfile({ user, onCancel, onUpdate }) {
   const handleUpdateSubmit = async (updatedData) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/user/update/${formData.id}`,
+        `https://calendar-app-backend-8mbw.onrender.com/user/update/${formData.id}`,
         {
           method: "POST",
           headers: {
@@ -34,7 +34,7 @@ export default function UpdateProfile({ user, onCancel, onUpdate }) {
             name: formData.newName, // Only include necessary fields
             email: formData.newEmail,
             password: formData.currentPassword,
-        }),
+          }),
         }
       );
       const result = await response.json();

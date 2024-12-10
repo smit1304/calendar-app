@@ -50,7 +50,7 @@ function Calendar() {
     ;
     
     try {
-      const url = `http://localhost:8080/calender/api/calendar/${userInfo.calendarId}/task/`;//Should be a relative url
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar/${userInfo.calendarId}/task/`;//Should be a relative url
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -84,7 +84,7 @@ function Calendar() {
 
     try {
       console.log(userInfo.calendarId, updatedEvent.id);
-      const url = `http://localhost:8080/calender/api/calendar/${userInfo.calendarId}/task/${updatedEvent.id}`;//Should be a relative url
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar/${userInfo.calendarId}/task/${updatedEvent.id}`;//Should be a relative url
       const response = await fetch(url, {
         method: "PUT",
         headers: {
@@ -117,7 +117,7 @@ function Calendar() {
 
     console.log(userInfo.calendarId, deletedEvent.id);
     try {
-      const url = `http://localhost:8080/calender/api/calendar/${userInfo.calendarId}/task/${deletedEvent.id}`;//Should be a relative url
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar/${userInfo.calendarId}/task/${deletedEvent.id}`;//Should be a relative url
       const response = await fetch(url, {
         method: "DELETE",
         headers: {
@@ -160,7 +160,7 @@ function Calendar() {
     try {
       //const calendarId = localStorage.getItem("calendarId");
       console.log(jsonUser.calendarId);
-      const url = `http://localhost:8080/calender/api/calendar/${jsonUser.calendarId}/task/`;//Should be a relative url
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar/${jsonUser.calendarId}/task/`;//Should be a relative url
       const response = await fetch(url, {
         method: "GET",
         headers: {

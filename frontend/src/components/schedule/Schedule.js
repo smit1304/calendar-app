@@ -23,9 +23,7 @@ export default function Schedule() {
         alert("No calendar ID found in localStorage!");
         return;
       }
-      const url = `http://localhost:8080/calender/api/calendar/${
-        calendarId
-      }/task/`;
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar/${calendarId}/task/`;
       const response = await fetch(url, {
         method: "GET",
         headers: {

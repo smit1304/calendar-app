@@ -28,7 +28,7 @@ export default function Signup() {
     //   alert("name, email and password are required");
     // }
     try {
-      const url = `http://localhost:8080/calender/api/calendar`;
+      const url = `https://calendar-app-backend-8mbw.onrender.com/calender/api/calendar`;
       const response = await fetch(url, {
         method: "POST",
         headers: {
