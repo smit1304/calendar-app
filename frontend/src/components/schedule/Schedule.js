@@ -4,6 +4,9 @@ import Placeholder2 from "../Placeholders/image2.png";
 import { Link } from "react-router-dom";
 import ProjectLogo from "../Placeholders/ProjectLogo.png";
 import { useEffect,useState } from "react";
+import "../home/Calendar.css";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 
 export default function Schedule() {
   const navigate = useNavigate();
@@ -75,27 +78,38 @@ export default function Schedule() {
           </li>
         </ul>
       </nav>
-      <div>
+      <div className="calendar-tasks-container">
         <h1>Calendar Tasks</h1>
         {tasks.length > 0 ? (
-          <ul>
-            {tasks.map((task, index) => (
-              <li key={task._id}>
-                {" "}
-                <br />
-                <strong>Id: {task._id} </strong> <br />
-                <strong>Title:</strong> {task.title} <br />
-                <strong>Description:</strong> {task.description} {} <br />
-                <strong>Start Date:</strong> {task.startDate} <br />
-                <strong>End Date:</strong> {task.endDate}
-                            
-              </li>
+          <div className="cards-container">
+            {tasks.map((task) => (
+              <Card
+                key={task._id}
+                style={{ width: "18rem", marginBottom: "1rem" }}
+              >
+                <Card.Header>{task.title}</Card.Header>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <strong>Id:</strong> {task._id}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <strong>Description:</strong> {task.description}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <strong>Start Date:</strong> {task.startDate}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <strong>End Date:</strong> {task.endDate}
+                  </ListGroup.Item>
+                </ListGroup>
+              </Card>
             ))}
-          </ul>
+          </div>
         ) : (
           <p>No tasks available.</p>
         )}
-      </div>
+      
+    </div>
     </div>
   );
 }

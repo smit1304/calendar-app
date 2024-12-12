@@ -5,6 +5,7 @@ import Login from "../login/Login";
 import { handleError } from "../../util";
 import { ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import './Signup.css';
 export default function Signup() {
   const [signupInfo, setSigninInfo] = useState({
     name: "",
@@ -96,9 +97,9 @@ export default function Signup() {
   };
   return (
     <>
-      <div className="container">
-        <h1>Sign Up</h1>
-        <Form>
+      <div className="signup-container">
+        <h1 className="signup-header">Sign Up</h1>
+        <Form className="signup-form">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Name </Form.Label>
             <Form.Control
@@ -135,8 +136,8 @@ export default function Signup() {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={handleSignup}>
-            Signin
+          <Button className="signup-button" onClick={handleSignup}>
+            Sign Up
           </Button>
         </Form>
       </div>

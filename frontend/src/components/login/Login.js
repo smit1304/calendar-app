@@ -3,6 +3,8 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import './Login.css';
+
 export default function Login() {
   const [loginInfo, setLoginInfo] = useState({
     email: "",
@@ -88,9 +90,9 @@ export default function Login() {
   };
   return (
     <>
-      <div className="container">
-        <h1>Login</h1>
-        <Form>
+      <div className="login-container">
+        <h1 className="login-header">Login</h1>
+        <Form className="login-form">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -116,12 +118,23 @@ export default function Login() {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={handleLogin}>
-            Login
-          </Button>
-          <Button variant="primary" type="submit" onClick={navigateToSignUp}>
-            sign in
-          </Button>
+          <div className="login-buttons">
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={handleLogin}
+              className="login-button"
+            >
+              Login
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={navigateToSignUp}
+              className="signup-button"
+            >
+              Sign Up
+            </Button>
+          </div>
         </Form>
       </div>
     </>
